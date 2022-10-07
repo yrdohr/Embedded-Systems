@@ -10,8 +10,8 @@ ComplexNumber_C complexAdd(const ComplexNumber_C a, const ComplexNumber_C b) {
 
 ComplexNumber_C complexSubtract(const ComplexNumber_C a, const ComplexNumber_C b) {
     ComplexNumber_C y = a;
-    y.real += b.real;
-    y.imag += b.imag;
+    y.real -= b.real;
+    y.imag -= b.imag;
     return y;
 }
 
