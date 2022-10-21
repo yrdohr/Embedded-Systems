@@ -3,13 +3,16 @@
 
 TrafficLight lights;
 DigitalIn sw(USER_BUTTON);
+DigitalIn A(PG_0);
 
 TrafficLight::LIGHT_STATE s;
 
 int main()
 {
     while (true) {
-
+        if (A == 1) {
+            lights.stop();
+        }
         //Wait for switch press
         while (sw==0);
 

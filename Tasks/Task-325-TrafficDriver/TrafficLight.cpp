@@ -34,6 +34,13 @@ void TrafficLight::flashYellow(bool flash) {
     }
 }
 
+
+
+void TrafficLight::stop() {
+    State = STOP;
+    updateOutput();
+}
+
 // Moore Machine - update outputs
 void TrafficLight::updateOutput()
 {

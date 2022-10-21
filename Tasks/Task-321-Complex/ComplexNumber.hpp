@@ -71,6 +71,39 @@ public:
     ComplexNumber addedTo(const ComplexNumber& c) {
         return ComplexNumber(this->real+c.real, this->imag+c.imag);
     }
+
+    //subtract
+    void subtract(const ComplexNumber& c) {
+        this->real -= c.real;
+        this->imag -= c.imag;
+    }
+
+    //subtractFrom
+    ComplexNumber subtractFrom(const ComplexNumber& c) {
+        return ComplexNumber(c.real-this->real, c.imag-this->imag);
+    }
+
+    //multiply
+    void multiply(const ComplexNumber& c) {
+        this->real *= c.real;
+        this->imag *= c.imag;
+    }
+
+    //multiplywith
+     ComplexNumber multiplywith(const ComplexNumber& c) {
+        return ComplexNumber(this->real*c.real, this->imag*c.imag);
+    }
+
+    //divide
+    void divide(ComplexNumber& c) {
+        this->real /= c.real;
+        this->imag /= c.imag;
+    }
+
+    //divideWith
+    ComplexNumber divideWith(const ComplexNumber& c) {
+        return ComplexNumber(this->real/c.real, this->imag/c.imag);
+    }
     
     //Display
     void display() {

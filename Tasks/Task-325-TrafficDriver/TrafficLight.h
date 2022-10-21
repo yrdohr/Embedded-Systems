@@ -22,6 +22,7 @@ class TrafficLight
 
     void yellowFlashISR();
     void flashYellow(bool flash);
+ 
     void updateOutput();
 
     public:
@@ -30,6 +31,8 @@ class TrafficLight
 
     //Destructor
     ~TrafficLight();
+    
+    void stop();
 
     //Advance the traffic lights to the next state
     LIGHT_STATE nextState();
