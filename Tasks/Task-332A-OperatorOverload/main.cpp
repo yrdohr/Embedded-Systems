@@ -70,6 +70,22 @@ public:
         result += u;
         return result;
     }
+
+    void operator-=(double u) {
+        double sum = this->getValue() - u;
+        this->setValue(sum);
+    }
+    void operator-=(DoubleNumber& u) {
+        double sum = this->getValue() - u.getValue();
+        this->setValue(sum);
+    }
+    DoubleNumber operator-(DoubleNumber& u) {
+        DoubleNumber result;
+        result = *this;
+        result -= u;
+        return result;
+    }
+
     DoubleNumber& operator=(double u) {
         this->setValue(u);
         return *this;
@@ -86,7 +102,15 @@ public:
     {
         // Return a true if u is equal to `this`
         // ** TO BE DONE BY THE STUDENT **
-        return false;
+        DoubleNumber result;
+        result = *this;
+        result -= u;
+        if (result == 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     operator double() {
@@ -109,9 +133,11 @@ int main()
     n1 += 1.0;      // Equivalent to n1.operator+=(1.0);
     n2 = "-3.0";
     n3 = n2;
+    bool a = n3==n1;
 
     DoubleNumber sum = (n0 + n1 + n2 + n3);
     cout << sum << endl;
+    cout << a << endl;
 
     while (true) {
 
