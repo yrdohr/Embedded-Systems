@@ -52,9 +52,11 @@ public:
 int main()
 {
     //Constructor Function overloading 
-    DoubleNumber n0(1.0);
+    // DoubleNumber n0(1.0);
+   
     DoubleNumber n1;
     DoubleNumber n2;
+    DoubleNumber n0(n1);
 
     //setValue function overloading  
     n1.setValue(10);
